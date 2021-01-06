@@ -9,12 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        List {
-            CategoryView(imageName: "burger", categoryName: "BURGER")
-            CategoryView(imageName: "pizza", categoryName: "PIZZA")
-            CategoryView(imageName: "pasta", categoryName: "PASTA")
-            CategoryView(imageName: "desserts", categoryName: "DESSERTS")
+        
+        NavigationView {
+            List {
+                NavigationLink(destination: DetailView(currentCategory: .burger)) {
+                    CategoryView(imageName: "burger", categoryName: "BURGER")
+                }
+                
+                NavigationLink(destination: DetailView(currentCategory: .pizza)) {
+                    CategoryView(imageName: "pizza", categoryName: "PIZZA")
+                }
+                
+                NavigationLink(destination: DetailView(currentCategory: .pasta)) {
+                    CategoryView(imageName: "pasta", categoryName: "PASTA")
+                }
+                
+                NavigationLink(destination: DetailView(currentCategory: .desserts)) {
+                    CategoryView(imageName: "desserts", categoryName: "DESSERTS")
+                }
+            }
+            .navigationTitle(Text("Food Delivery"))
         }
+        
     }
 }
 
