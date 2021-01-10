@@ -12,11 +12,17 @@ struct DetailView: View {
     let helper = Helper()
     let currentCategory: Categories
     
+    @State var showOrderSheet = false
+    
     var body: some View {
         List(helper.filterData(foodDataSet: helper.foodData, by: currentCategory)) { food in
-            DetailRow(food: food)
+            DetailRow(food: food, showOrderSheet: $showOrderSheet)
         }
         .navigationTitle(Text(helper.categoryString(for: currentCategory)))
+        .listStyle(SidebarListStyle())
+        .sheet(isPresented: $showOrderSheet, content: {
+            OrderForm()
+        })
         .listStyle(SidebarListStyle())
     }
 }
