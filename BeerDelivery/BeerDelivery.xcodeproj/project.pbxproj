@@ -11,6 +11,9 @@
 		1F46E08825A5801B00AF0F7A /* DetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F46E08725A5801B00AF0F7A /* DetailRow.swift */; };
 		1F46E08D25A585D900AF0F7A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F46E08C25A585D900AF0F7A /* Helper.swift */; };
 		1F46E09225A5879000AF0F7A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F46E09125A5879000AF0F7A /* DetailView.swift */; };
+		1F8F66FC25AAAFA400715FFF /* Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F66FB25AAAFA400715FFF /* Subview.swift */; };
+		1F8F670125AAB6AF00715FFF /* SubviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F670025AAB6AF00715FFF /* SubviewModel.swift */; };
+		1F8F670E25AABA0500715FFF /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F670D25AABA0500715FFF /* OnboardingView.swift */; };
 		1FA37EE525A83989002F5BE6 /* OrderForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA37EE425A83989002F5BE6 /* OrderForm.swift */; };
 		1FA5ED812599AE0D0028A362 /* BeerDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5ED802599AE0D0028A362 /* BeerDeliveryApp.swift */; };
 		1FA5ED832599AE0D0028A362 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5ED822599AE0D0028A362 /* ContentView.swift */; };
@@ -42,6 +45,9 @@
 		1F46E08725A5801B00AF0F7A /* DetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRow.swift; sourceTree = "<group>"; };
 		1F46E08C25A585D900AF0F7A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		1F46E09125A5879000AF0F7A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1F8F66FB25AAAFA400715FFF /* Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subview.swift; sourceTree = "<group>"; };
+		1F8F670025AAB6AF00715FFF /* SubviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubviewModel.swift; sourceTree = "<group>"; };
+		1F8F670D25AABA0500715FFF /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		1FA37EE425A83989002F5BE6 /* OrderForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderForm.swift; sourceTree = "<group>"; };
 		1FA5ED7D2599AE0D0028A362 /* BeerDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA5ED802599AE0D0028A362 /* BeerDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDeliveryApp.swift; sourceTree = "<group>"; };
@@ -86,8 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				1F46E07F25A5754700AF0F7A /* FoodModel.swift */,
+				1F8F670025AAB6AF00715FFF /* SubviewModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1F8F66FA25AAAEA700715FFF /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1F8F66FB25AAAFA400715FFF /* Subview.swift */,
+				1F8F670D25AABA0500715FFF /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		1FA5ED742599AE0D0028A362 = {
@@ -113,8 +129,9 @@
 		1FA5ED7F2599AE0D0028A362 /* BeerDelivery */ = {
 			isa = PBXGroup;
 			children = (
-				1F46E07E25A5753100AF0F7A /* Models */,
 				1FA5ED802599AE0D0028A362 /* BeerDeliveryApp.swift */,
+				1F8F66FA25AAAEA700715FFF /* Onboarding */,
+				1F46E07E25A5753100AF0F7A /* Models */,
 				1FA5ED822599AE0D0028A362 /* ContentView.swift */,
 				1FA5ED842599AE110028A362 /* Assets.xcassets */,
 				1FA5ED892599AE110028A362 /* Info.plist */,
@@ -285,8 +302,11 @@
 				1F46E08025A5754700AF0F7A /* FoodModel.swift in Sources */,
 				1F46E09225A5879000AF0F7A /* DetailView.swift in Sources */,
 				1F46E08825A5801B00AF0F7A /* DetailRow.swift in Sources */,
+				1F8F670E25AABA0500715FFF /* OnboardingView.swift in Sources */,
 				1F46E08D25A585D900AF0F7A /* Helper.swift in Sources */,
+				1F8F670125AAB6AF00715FFF /* SubviewModel.swift in Sources */,
 				1FA5ED832599AE0D0028A362 /* ContentView.swift in Sources */,
+				1F8F66FC25AAAFA400715FFF /* Subview.swift in Sources */,
 				1FA37EE525A83989002F5BE6 /* OrderForm.swift in Sources */,
 				1FA5ED812599AE0D0028A362 /* BeerDeliveryApp.swift in Sources */,
 			);

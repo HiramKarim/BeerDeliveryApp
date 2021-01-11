@@ -24,6 +24,21 @@ struct Helper {
                     FoodModel(title: "Cupcake", price: 2.99, category: .desserts),
                     FoodModel(title: "Icecream", price: 2.99, category: .desserts)]
     
+    let subviewData = [
+        SubviewModel(imageString: "meditating",
+                     title: "Take some time out",
+                     caption: "Take your time out and bring awareness into your everyday life",
+                     tag: .meditating),
+        SubviewModel(imageString: "running",
+                     title: "Conquer personal hindrances",
+                     caption: "Meditating helps you dealing with anxiety and bringing calmness into your life",
+                     tag: .running),
+        SubviewModel(imageString: "walking",
+                     title: "Create a peaceful mind",
+                     caption: "Regular meditation sessions create a peaceful inner mind",
+                     tag: .walking)
+    ]
+    
     func filterData(foodDataSet: [FoodModel], by category: Categories) -> [FoodModel] {
         return foodDataSet.filter { (food) -> Bool in
             food.category == category
