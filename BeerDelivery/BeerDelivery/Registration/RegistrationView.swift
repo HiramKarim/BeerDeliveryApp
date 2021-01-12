@@ -98,14 +98,140 @@ struct Home: View {
                     }
                     
                 }
-                
             }
             .padding(.top, 30)
+            
+            if index == 0 {
+                Login()
+            } else {
+                
+            }
             
         }
         
     }
     
+}
+
+var social = ["twitter","fb","google"]
+
+struct Login: View {
+    
+    @State var password = ""
+    
+    var body: some View {
+        VStack {
+            
+            //MARK: - PHOTO AND TEXT
+            HStack {
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Hello Again,")
+                        .fontWeight(.bold)
+                    Text("Justine")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Button(action: {
+                        
+                    }) {
+                        Text("This isn't me")
+                            .font(.system(size: 14))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("Color"))
+                    }
+                }
+                Spacer(minLength: 0)
+                Image("profile")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 85, height: 85)
+                    .clipShape(Circle())
+            }
+            .padding(.horizontal, 25)
+            .padding(.top, 30)
+            
+            //MARK: - PASSWORD TEXTFIELD AND LABELS
+            VStack(alignment: .leading, spacing: 15) {
+                Text("Password")
+                    .font(.caption)
+                    .fontWeight(.bold)
+                    .foregroundColor(.gray)
+                TextField("Password", text: $password)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(5)
+                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
+                    .shadow(color: Color.black.opacity(0.08), radius: 5, x: 0, y: -5)
+                Button(action: {
+                    
+                }) {
+                    Text("Forgot Password")
+                        .font(.system(size: 14))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("Color"))
+                }
+                .padding(.top, 10)
+            }
+            .padding(.horizontal, 25)
+            .padding(.top, 25)
+            
+            //MARK: - LOGIN BUTTON
+            Button(action: {
+                
+            }) {
+                Text("Login")
+                    .font(.system(size: 20))
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 50)
+                    .background(
+                        LinearGradient(gradient: .init(colors: [Color("Color"), Color("Color1")]),                startPoint: .topLeading,
+                                       endPoint: .bottomTrailing)
+                    )
+                    .cornerRadius(10)
+            }
+            .padding(.horizontal, 25)
+            .padding(.top, 25)
+            
+            //MARK: - FACE ID BUTTON
+            Button(action: {
+                
+            }) {
+                HStack(spacing: 35) {
+                    Image(systemName: "faceid")
+                        .font(.system(size: 26))
+                        .foregroundColor(Color("Color"))
+                    Text("Login With Face ID")
+                        .font(.system(size: 20))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("Color"))
+                    Spacer(minLength: 0)
+                }
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 8).stroke(Color("Color"), lineWidth: 1))
+            }
+            .padding(.top, 20)
+            .padding(.horizontal, 5)
+            
+            //MARK: - ADDITIONAL SOCIAL NETWORK TO CONNECT
+            HStack(spacing: 30) {
+                ForEach(social, id: \.self) {
+                    name in
+                    Button(action: {
+                        
+                    }) {
+                        Image(name)
+                            .renderingMode(.template)
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(Color(name == "google" ? "Color1" : "Color"))
+                    }
+                }
+            }
+            .padding(.top, 25)
+            
+        }
+    }
 }
 
 struct RegistrationView_Previews: PreviewProvider {
