@@ -12,7 +12,8 @@ struct BeerDeliveryApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            OnboardingView()
+            //OnboardingView()
+            RegistrationView()
         }
     }
 }
